@@ -24,7 +24,7 @@ parameters:
 
 
 ## Composer scripts
-Add the following to `scripts` section in `composer.json` file to run linting.
+Add the following to `scripts` section in `composer.json` file to run code scan.
 
 ```json
 "phpstan": "phpstan analyse --memory-limit=2048M",
