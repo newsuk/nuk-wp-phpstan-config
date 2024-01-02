@@ -7,7 +7,7 @@ This library contains PHPStan configuration for NewsUK plugins and themes.
 Composer install:
 
 ```bash
-composer require --dev newsuk/nuk-wp-phpcstan-config
+composer require --dev newsuk/nuk-wp-phpstan-config
 ```
 
 ## Using the ruleset
