@@ -1,0 +1,1 @@
+# nuk-wp-phpstan-config
