@@ -20,7 +20,7 @@ jobs:
                   name: PHPStan codescan
                   command: |
                     vendor/bin/phpstan --version
-                    if vendor/bin/stan --version | grep -q "PHP Static Analysis Tool"; then
+                    if vendor/bin/phpstan --version | grep -q "PHP Static Analysis Tool"; then
                       echo "PHPStan installed successfully."
                     else
                       echo "Error: PHPStan is not installed."
