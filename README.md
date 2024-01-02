@@ -24,8 +24,13 @@ parameters:
 
 
 ## Composer scripts
-Add the following to `scripts` section in `composer.json` file to run code scan.
+Add the following to `scripts` section in `composer.json` file and run `composer phpstan`
 
 ```json
 "phpstan": "phpstan analyse --memory-limit=2048M"
+```
+Add the following to generate baseline file for existing plugins and run `composer phpstan-baseline`
+
+```json
+"phpstan-baseline": "phpstan analyse -b --allow-empty-baseline"
 ```
