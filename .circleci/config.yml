@@ -17,7 +17,7 @@ jobs:
                   name: Composer validate
                   command: composer validate --strict
             - run:
-                  name: PHPStan codescan
+                  name: PHPStan codescan install check
                   command: |
                     vendor/bin/phpstan --version
                     if vendor/bin/phpstan --version | grep -q "PHP Static Analysis Tool"; then
