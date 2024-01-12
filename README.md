@@ -11,7 +11,7 @@ composer require --dev newsuk/nuk-wp-phpstan-config
 ```
 
 ## Using the ruleset
-Create a `phpstan.neon.dist` file in your project and add the following:
+Create a `phpstan.neon.dist` file in the root of your project and add the below config. Feel free to alter the `paths` based on your project requirements
 
 ```yml
 parameters:

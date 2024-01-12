@@ -1,7 +1,7 @@
 {
     "name": "newsuk/nuk-wp-phpstan-config",
     "description": "PHPStan configuration for WordPress VIP plugins and themes",
-    "type": "phpstan-standard",
+    "type": "phpstan-extension",
     "license": "MIT",
     "authors": [
         {
@@ -17,6 +17,9 @@
         "phpstan/phpstan-strict-rules": "^1.5"
     },
     "config": {
+        "platform": {
+            "php": "^7.4|^8.0"
+        },
         "allow-plugins": {
             "phpstan/extension-installer": true
         }
