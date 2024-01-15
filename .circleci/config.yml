@@ -1,0 +1,32 @@
+version: 2.1
+jobs:
+    php-codescan:
+        docker:
+            - image: cimg/php:8.2-node
+        steps:
+            - checkout
+            - run:
+                  name: Install production dependencies
+                  command: composer install --no-dev -o
+            - run:
+                  name: Composer validate
+                  command: composer validate --strict
+            - run:
+                  name: PHPStan codescan install check
+                  command: |
+                    vendor/bin/phpstan --version
+                    if vendor/bin/phpstan --version | grep -q "PHP Static Analysis Tool"; then
+                      echo "PHPStan installed successfully."
+                    else
+                      echo "Error: PHPStan is not installed."
+                      exit 1
+                    fi
+            - persist_to_workspace:
+                  root: .
+                  paths:
+                      - vendor
+workflows:
+    version: 2
+    build:
+        jobs:
+            - php-codescan
