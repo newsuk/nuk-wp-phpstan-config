@@ -1,8 +1,8 @@
 {
     "name": "newsuk/nuk-wp-phpstan-config",
     "description": "PHPStan configuration for WordPress VIP plugins and themes",
-    "type": "phpstan-extension",
     "license": "MIT",
+    "type": "phpstan-extension",
     "authors": [
         {
             "name": "Content Platforms",
@@ -10,16 +10,28 @@
         }
     ],
     "require": {
-        "szepeviktor/phpstan-wordpress": "^1.3",
+        "php": ">=7.4",
         "phpstan/extension-installer": "^1.3",
-        "swissspidy/phpstan-no-private": "^0.2.0",
         "phpstan/phpstan-deprecation-rules": "^1.1",
         "phpstan/phpstan-strict-rules": "^1.5",
-        "php": ">=7.4"
+        "swissspidy/phpstan-no-private": "^0.2.0",
+        "szepeviktor/phpstan-wordpress": "^1.3"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.42"
     },
     "config": {
         "allow-plugins": {
+            "ergebnis/composer-normalize": true,
             "phpstan/extension-installer": true
         }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "composer normalize"
+        ],
+        "post-update-cmd": [
+            "composer normalize"
+        ]
     }
 }
