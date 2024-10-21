@@ -12,6 +12,9 @@ jobs:
                   name: Composer validate
                   command: composer validate --strict
             - run:
+                  name: Normalize composer.json
+                  command: composer normalize --no-interaction --dry-run
+            - run:
                   name: PHPStan codescan install check
                   command: |
                     vendor/bin/phpstan --version
