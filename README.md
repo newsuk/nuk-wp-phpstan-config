@@ -69,4 +69,4 @@ The content schema uses Semantic Versioning `semver` for versioning. The package
 
 -   Update the relevant files with the new version. Commit the updated files.
 -   Push the changes to the master branch, by merging the associated pull request
--   Create a release targeting the `master` branch within GitHub.
+-   Create a release targeting the `main` branch within GitHub.
