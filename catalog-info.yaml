@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: nuk-wp-phpstan-config
+  description: This library contains PHPStan configuration for NewsUK plugins and themes.
+  tags:
+    - wordpress
+    - phpstan
+    - php
+    - static-analysis
+    - coding-standards
+    - bu:newsuk
+  annotations:
+    circleci.com/project-slug: github/newsuk/nuk-wp-phpstan-config
+    jira/project-key: CPNT
+spec:
+  type: library
+  lifecycle: development
+  owner: group:newsuk
